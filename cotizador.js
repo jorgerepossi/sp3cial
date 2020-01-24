@@ -1,7 +1,8 @@
 const anticipoSection = $(".anticipoSection");
-const enviar = $("#enviar");
+const enviar = $("#button");
 const resultado = $(".resultado");
 const userFormData = $("#userFormData");
+
 const nombre = $("input#nombre");
 const telefono = $("input#telefono");
 const email = $("input#email");
@@ -38,6 +39,7 @@ $("#range").on("input", function() {
   );
 
   $(this).attr("value", range);
+  $("#rangoSeleccionado").attr("value", range);
 });
 
 $("#showInfo").on("click", function() {
@@ -46,6 +48,8 @@ $("#showInfo").on("click", function() {
 
 $("#showInfoNo").on("click", function() {
   anticipoSection.slideUp();
+  let rangoSeleccionado = $("#rangoSeleccionado").attr('value', '0');
+  console.log("valor es: " + rangoSeleccionado);
 });
 
 $('input').on('change', function() {
@@ -111,17 +115,9 @@ $("#calcular").on("click", function(e) {
          resultado.html(
            `
              <div class='has-success'>
-             <p class='control-label'> Modelo seleccionado ` +
-             modeloDelAuto +
-             `</p>
-             <p class='control-label'> Anticipo de $` +
-             String(anticipo).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
-             `</p>
-             <p class='control-label'> ` +
-             cantCuotasRestantes +
-             ` Cuotas de $` +
-             String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
-             `</p> 
+             <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
+             <p class='control-label'> Anticipo de $` + String(anticipo).replace(/(.)(?=(\d{3})+$)/g, "$1.") +  `</p>
+             <p class='control-label'> ` + cantCuotasRestantes + ` Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
              </div>
 
            `
@@ -131,18 +127,16 @@ $("#calcular").on("click", function(e) {
          $("#valorDelAuto").hide();
          anticipoUsado.hide();
          anticipoSection.hide();
-       } else if ($("#anticipoSeleccionado").val() == 'no') {
-         console.log("no est activo");
 
+       } else if ($("#anticipoSeleccionado").val() == 'no') {
+
+   
+         
          resultado.html(
            `
             <div class='has-success'>
-            <p class='control-label'> Modelo seleccionado ` +
-             modeloDelAuto +
-             `</p>
-            <p class='control-label'> 84 Cuotas de $` +
-             String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
-             `</p> 
+            <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
+            <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
             </div>
 
           `
@@ -150,17 +144,14 @@ $("#calcular").on("click", function(e) {
          anticipoUsado.hide();
          enviar.show();
          $("#valorDelAuto").hide();
+         $("#range").val();
          $("#calcular").hide();
        } else {
          resultado.html(
            `
             <div class='has-success'>
-            <p class='control-label'> Modelo seleccionado ` +
-             modeloDelAuto +
-             `</p>
-            <p class='control-label'> 84 Cuotas de $` +
-             String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
-             `</p> 
+            <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
+            <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
            </div>
 
           `

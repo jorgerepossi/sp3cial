@@ -70,7 +70,8 @@
           <div class="col-md-1 col-sm-12 col-xs-12"></div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <form id="formContacto" action="">
+         <form id="invitacion" name="invitacion" method="post" action="autospecial.php" autocomplete="off"
+                     onsubmit="enviar();return false;">
             <h2>COMPLETÁ EL FORMULARIO
               Y CALCULÁ EL VALOR DE TU CUOTA</h2>
             <div id="userFormData">
@@ -123,7 +124,7 @@
             <div class="form-group">
 
 
-              <select name="valordelauto" id="valorDelAuto" class="inputCiudad form-control" required>
+              <select name="modelo" id="valorDelAuto" class="inputCiudad form-control" required>
                 <option selected name="modelo"> Modelo de interés</option>
 
                 <option name="Ford Ka" data-valor="835939">Ford Ka</option>
@@ -160,20 +161,21 @@
               <label for="">
 
                 <p><span id="anticipo"> 0 </span> </p>
-                <input id="range" type="range" value="50000" min="50000" max="600000" step="100">
+                <input id="range" type="range" value="0" min="50000" max="600000" step="100" name="anticipoAgregado">
                 <p class="left">$50.000</p>
                 <p class="right">$600.000</p>
               </label>
             </div>
             <input type="hidden" name="modeloSeleccionado" id="modeloSeleccionado" value="">
             <input type="hidden" name="anticipoSeleccionado" id="anticipoSeleccionado" value="">
+            <input type="hidden" name="rangoSeleccionado" id="rangoSeleccionado" value="">
             <!-- <input type="text" id="cantCuotasRestantes"> -->
 
             <button id="calcular" class="boton btn-blue__item" type="submit">Calcular Cuota </button>
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 
-            <button id="enviar" class="boton btn-blue__item" type="submit">recibí mas info </button>
+            <button id="button" class="boton btn-blue__item" type="submit">recibí mas info </button>
 
           </form>
 
