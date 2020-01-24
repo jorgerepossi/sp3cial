@@ -124,7 +124,7 @@
 
 
               <select name="valordelauto" id="valorDelAuto" class="inputCiudad form-control" required>
-                <option selected name="seleccionar"> Modelo de interés</option>
+                <option selected name="modelo"> Modelo de interés</option>
 
                 <option name="Ford Ka" data-valor="835939">Ford Ka</option>
                 <option name="Ford Ka+" data-valor="833578">Ford Ka+</option>
