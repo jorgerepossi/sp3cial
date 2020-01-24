@@ -2,18 +2,13 @@ const anticipoSection = $(".anticipoSection");
 const enviar = $("#button");
 const resultado = $(".resultado");
 const userFormData = $("#userFormData");
-
 const nombre = $("input#nombre");
 const telefono = $("input#telefono");
 const email = $("input#email");
 const emailValidate = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 const error = $("#error");
 const anticipoUsado = $(".anticipoUsado");
-const formatterNumber = new Intl.NumberFormat("es-CL", {
-  currency: "CLP",
-  style: "currency",
-  maximumSignificantDigits: 3
-});
+
 
 $("#anticipo").html(
   "Anticipo de " + String($("#range").val()).replace(/(.)(?=(\d{3})+$)/g, "$1.")
@@ -48,16 +43,14 @@ $("#showInfo").on("click", function() {
 
 $("#showInfoNo").on("click", function() {
   anticipoSection.slideUp();
-  let rangoSeleccionado = $("#rangoSeleccionado").attr('value', '0');
+  let rangoSeleccionado = $("#rangoSeleccionado").attr("value", "0");
   console.log("valor es: " + rangoSeleccionado);
 });
 
-$('input').on('change', function() {
+$("input").on("change", function() {
   let activo = $('[type="radio"]:checked').val();
   $("#anticipoSeleccionado").val(activo);
 });
-
-
 
 $("#calcular").on("click", function(e) {
   e.preventDefault();
@@ -65,23 +58,13 @@ $("#calcular").on("click", function(e) {
   if (nombre.val() == "") {
     error.show().html("El campo <strong>Nombre</strong> es requerido");
   } else if (nombre.val().length < 4) {
-    error
-      .show()
-      .html(
-        "El campo <strong>Nombre</strong> debe tener al menos de 4 caracteres"
-      );
+    error.show().html( "El campo <strong>Nombre</strong> debe tener al menos de 4 caracteres" );
   } else if (telefono.val() == "") {
     error.show().html("Debes completar el campo <strong>Teléfono </strong> ");
   } else if (isNaN(telefono.val())) {
-    error
-      .show()
-      .html("El campo <strong>Teléfono </strong>  sólo admite números");
+    error.show().html("El campo <strong>Teléfono </strong>  sólo admite números");
   } else if (telefono.val().length < 7) {
-    error
-      .show()
-      .html(
-        "El campo <strong>Teléfono </strong> debe tener al menos de 8 caracteres"
-      );
+    error.show().html("El campo <strong>Teléfono </strong> debe tener al menos de 8 caracteres");
   } else if (email.val() == "") {
     error.show().html("Debes completar el campo <strong>Email </strong> ");
   } else if (!emailValidate.test(email.val())) {
@@ -107,60 +90,61 @@ $("#calcular").on("click", function(e) {
 
       userFormData.hide();
 
-
-
-
-       if ($("#anticipoSeleccionado").val() == 'si') {
-         console.log("activo");
-         resultado.html(
-           `
+      if ($("#anticipoSeleccionado").val() == "si") {
+        console.log("activo");
+        resultado.html(
+          `
              <div class='has-success'>
              <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
-             <p class='control-label'> Anticipo de $` + String(anticipo).replace(/(.)(?=(\d{3})+$)/g, "$1.") +  `</p>
-             <p class='control-label'> ` + cantCuotasRestantes + ` Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
+             <p class='control-label'> Anticipo de $` +  String(anticipo).replace(/(.)(?=(\d{3})+$)/g, "$1.") +  `</p>
+             <p class='control-label'> ` + cantCuotasRestantes + ` Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +  `</p> 
              </div>
-
-           `
-         );
-         enviar.show();
-         $("#calcular").hide();
-         $("#valorDelAuto").hide();
-         anticipoUsado.hide();
-         anticipoSection.hide();
-
-       } else if ($("#anticipoSeleccionado").val() == 'no') {
-
-   
-         
-         resultado.html(
-           `
+             `
+        );
+        enviar.show();
+        $("#calcular").hide();
+        $("#valorDelAuto").hide();
+        anticipoUsado.hide();
+        anticipoSection.hide();
+        $("#cuotasAPagarDe").attr("value", " " + cantCuotasRestantes +  " Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            "" );
+      } else if ($("#anticipoSeleccionado").val() == "no") {
+        resultado.html(
+          `
             <div class='has-success'>
             <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
             <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
             </div>
 
           `
-         );
-         anticipoUsado.hide();
-         enviar.show();
-         $("#valorDelAuto").hide();
-         $("#range").val();
-         $("#calcular").hide();
-       } else {
-         resultado.html(
-           `
+        );
+        $("#cuotasAPagarDe").attr(
+          "value",  " " + cantCuotasRestantes + " Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            ""
+        );
+        anticipoUsado.hide();
+        enviar.show();
+        $("#valorDelAuto").hide();
+        $("#range").val();
+        $("#calcular").hide();
+      } else {
+        resultado.html(
+          `
             <div class='has-success'>
             <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
             <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
            </div>
 
           `
-         );
-         anticipoUsado.hide();
-         enviar.show();
-         $("#valorDelAuto").hide();
+        );
+        $("#cuotasAPagarDe").attr(
+          "value",  " " + cantCuotasRestantes + "Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + ""
+        );
+        anticipoUsado.hide();
+        enviar.show();
+        $("#valorDelAuto").hide();
         $("#calcular").hide();
-       }
+      }
     }
     // fin calcular
   }

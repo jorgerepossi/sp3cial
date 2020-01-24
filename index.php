@@ -169,6 +169,7 @@
             <input type="hidden" name="modeloSeleccionado" id="modeloSeleccionado" value="">
             <input type="hidden" name="anticipoSeleccionado" id="anticipoSeleccionado" value="">
             <input type="hidden" name="rangoSeleccionado" id="rangoSeleccionado" value="">
+            <input type="hidden" name="cuotasAPagarDe" id="cuotasAPagarDe" value="">
             <!-- <input type="text" id="cantCuotasRestantes"> -->
 
             <button id="calcular" class="boton btn-blue__item" type="submit">Calcular Cuota </button>
