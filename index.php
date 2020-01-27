@@ -20,7 +20,33 @@
   <link rel="stylesheet" href="cotizador.css">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://www.ford.com.ar/etc/designs/guxfoap/clientlibs/guxfoap/img/favicon.ico">
-
+   <!-- Facebook Pixel Code -->
+   <script>
+      ! function(f, b, e, v, n, t, s) {
+         if (f.fbq) return;
+         n = f.fbq = function() {
+            n.callMethod ?
+               n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+         };
+         if (!f._fbq) f._fbq = n;
+         n.push = n;
+         n.loaded = !0;
+         n.version = '2.0';
+         n.queue = [];
+         t = b.createElement(e);
+         t.async = !0;
+         t.src = v;
+         s = b.getElementsByTagName(e)[0];
+         s.parentNode.insertBefore(t, s)
+      }(window,
+         document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '344731482542933'); // Insert your pixel ID here.
+      fbq('track', 'PageView');
+   </script>
+   <noscript><img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=344731482542933&ev=PageView&noscript=1" /></noscript>
+   <!-- DO NOT MODIFY -->
+   <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -64,6 +90,13 @@
                   <img src="ka.jpg" alt="" class="img-responsive"></div>
                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
                   <img src="kaplus.jpg" alt="" class="img-responsive"></div>
+              </div>
+
+              <div class="col-md-12 nopadding" >
+              <p style="margin-top: 20px"><small>
+              Los valor de las cuotas expresadas corresponden a la cuota pura, sin gastos administrativos ni seguro. 
+              </small>
+            </p>
               </div>
             </div>
           </div>

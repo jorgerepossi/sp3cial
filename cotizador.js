@@ -119,7 +119,7 @@ $("#calcular").on("click", function(e) {
           `
         );
         $("#cuotasAPagarDe").attr(
-          "value",  " " + cantCuotasRestantes + " Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+          "value",  " 84 Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
             ""
         );
         anticipoUsado.hide();
@@ -138,7 +138,7 @@ $("#calcular").on("click", function(e) {
           `
         );
         $("#cuotasAPagarDe").attr(
-          "value",  " " + cantCuotasRestantes + "Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + ""
+          "value",  " 84 Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + ""
         );
         anticipoUsado.hide();
         enviar.show();
