@@ -1,4 +1,5 @@
 const anticipoSection = $(".anticipoSection");
+
 const enviar = $("#button");
 const resultado = $(".resultado");
 const userFormData = $("#userFormData");
@@ -16,7 +17,7 @@ $("#anticipo").html(
 
 error.hide();
 enviar.hide();
-// anticipoSection.hide();
+
 
 $("#valorDelAuto").change(function() {
   let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
@@ -115,7 +116,6 @@ $("#calcular").on("click", function(e) {
             <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
             <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
             </div>
-
           `
         );
         $("#cuotasAPagarDe").attr(
@@ -134,7 +134,6 @@ $("#calcular").on("click", function(e) {
             <p class='control-label'> Modelo seleccionado ` + modeloDelAuto + `</p>
             <p class='control-label'> 84 Cuotas de $` + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") + `</p> 
            </div>
-
           `
         );
         $("#cuotasAPagarDe").attr(
