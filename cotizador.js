@@ -14,6 +14,7 @@ $("#anticipo").html(
 );
 
 $("" + anticipoSection + " p.left").html("$50.000");
+$("" + anticipoSection + " p.right").html("$600.000");
 error.hide();
 enviar.hide();
 

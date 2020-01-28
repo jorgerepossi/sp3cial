@@ -192,7 +192,7 @@
                 <p><span id="anticipo"> 0 </span> </p>
                 <input id="range" type="range" value="0" min="50000" max="600000" step="100" name="anticipoAgregado">
                 <p class="left"></p>
-                <p class="right">$600.000</p>
+                <p class="right"></p>
               </label>
             </div>
             <input type="hidden" name="modeloSeleccionado" id="modeloSeleccionado" value="">
