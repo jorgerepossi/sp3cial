@@ -1,17 +1,17 @@
-const anticipo = $("#anticipo");
-const enviar = $("#button");
-const valorAuto = $("#valorDelAuto");
-const userFormData = $("#userFormData");
-const error = $("#error");
 const anticipoSection = $(".anticipoSection");
-const anticipoUsado = $(".anticipoUsado");
+
+const enviar = $("#button");
 const resultado = $(".resultado");
+const userFormData = $("#userFormData");
 const nombre = $("input#nombre");
 const telefono = $("input#telefono");
 const email = $("input#email");
 const emailValidate = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+const error = $("#error");
+const anticipoUsado = $(".anticipoUsado");
 
-anticipo.html(
+
+$("#anticipo").html(
   "Anticipo de " + String($("#range").val()).replace(/(.)(?=(\d{3})+$)/g, "$1.")
 );
 
@@ -19,7 +19,7 @@ error.hide();
 enviar.hide();
 
 
-valorAuto.change(function() {
+$("#valorDelAuto").change(function() {
   let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
 
   $(this).each(function() {
@@ -30,7 +30,7 @@ valorAuto.change(function() {
 $("#range").on("input", function() {
   let range = $(this).val();
 
-  anticipo.html(
+  $("#anticipo").html(
     "Anticipo de " + String(range).replace(/(.)(?=(\d{3})+$)/g, "$1.")
   );
 
@@ -71,7 +71,6 @@ $("#calcular").on("click", function(e) {
   } else if (!emailValidate.test(email.val())) {
     error.show().html("El campo <strong>Email </strong> no es váildo");
   } else {
-
     // calcular
     if ($("#valorDelAuto option:selected").attr("name") == "seleccionar") {
       error.show().html("Debe seleccionar un modelo");
@@ -82,12 +81,12 @@ $("#calcular").on("click", function(e) {
 
       let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
       let modeloDelAuto = $("#valorDelAuto option:selected").attr("name");
-      let cantCuotasPagas = $("#cantCuotasPagas").val();
       let anticipo = $("#range").attr("value");
 
       const valorDeLaCuota = Math.round(valorDelAuto / 84);
       const cuotasPagas = Math.round(anticipo / valorDeLaCuota);
       const cantCuotasRestantes = 86 - cuotasPagas;
+      
 
       userFormData.hide();
 
@@ -104,7 +103,7 @@ $("#calcular").on("click", function(e) {
         );
         enviar.show();
         $("#calcular").hide();
-        valorAuto.hide();
+        $("#valorDelAuto").hide();
         anticipoUsado.hide();
         anticipoSection.hide();
         $("#cuotasAPagarDe").attr("value", " " + cantCuotasRestantes +  " Cuotas de $" + String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
@@ -124,7 +123,7 @@ $("#calcular").on("click", function(e) {
         );
         anticipoUsado.hide();
         enviar.show();
-        valorAuto.hide();
+        $("#valorDelAuto").hide();
         $("#range").val();
         $("#calcular").hide();
       } else {
@@ -141,7 +140,7 @@ $("#calcular").on("click", function(e) {
         );
         anticipoUsado.hide();
         enviar.show();
-        valorAuto.hide();
+        $("#valorDelAuto").hide();
         $("#calcular").hide();
       }
     }
