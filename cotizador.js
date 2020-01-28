@@ -44,8 +44,8 @@ $("#showInfo").on("click", function() {
 
 $("#showInfoNo").on("click", function() {
   anticipoSection.slideUp();
-  let rangoSeleccionado = $("#rangoSeleccionado").attr("value", "0");
-  console.log("valor es: " + rangoSeleccionado);
+  $("#rangoSeleccionado").attr("value", "0");
+ 
 });
 
 $("input").on("change", function() {
