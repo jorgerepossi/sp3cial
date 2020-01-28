@@ -20,33 +20,33 @@
   <link rel="stylesheet" href="cotizador.css">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://www.ford.com.ar/etc/designs/guxfoap/clientlibs/guxfoap/img/favicon.ico">
-   <!-- Facebook Pixel Code -->
-   <script>
-      ! function(f, b, e, v, n, t, s) {
-         if (f.fbq) return;
-         n = f.fbq = function() {
-            n.callMethod ?
-               n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-         };
-         if (!f._fbq) f._fbq = n;
-         n.push = n;
-         n.loaded = !0;
-         n.version = '2.0';
-         n.queue = [];
-         t = b.createElement(e);
-         t.async = !0;
-         t.src = v;
-         s = b.getElementsByTagName(e)[0];
-         s.parentNode.insertBefore(t, s)
-      }(window,
-         document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '344731482542933'); // Insert your pixel ID here.
-      fbq('track', 'PageView');
-   </script>
-   <noscript><img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=344731482542933&ev=PageView&noscript=1" /></noscript>
-   <!-- DO NOT MODIFY -->
-   <!-- End Facebook Pixel Code -->
+  <!-- Facebook Pixel Code -->
+  <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '344731482542933'); // Insert your pixel ID here.
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=344731482542933&ev=PageView&noscript=1" /></noscript>
+  <!-- DO NOT MODIFY -->
+  <!-- End Facebook Pixel Code -->
 </head>
 
 <body>
@@ -92,19 +92,20 @@
                   <img src="kaplus.jpg" alt="" class="img-responsive"></div>
               </div>
 
-              <div class="col-md-12 nopadding" >
-              <p style="margin-top: 20px"><small>
-              Los valor de las cuotas expresadas corresponden a la cuota pura, sin gastos administrativos ni seguro. 
-              </small>
-            </p>
+              <div class="col-md-12 nopadding">
+                <p style="margin-top: 20px"><small>
+                    Los valor de las cuotas expresadas corresponden a la cuota pura, sin gastos administrativos ni
+                    seguro.
+                  </small>
+                </p>
               </div>
             </div>
           </div>
           <div class="col-md-1 col-sm-12 col-xs-12"></div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-         <form id="invitacion" name="invitacion" method="post" action="autospecial.php" autocomplete="off"
-                     onsubmit="enviar();return false;">
+          <form id="invitacion" name="invitacion" method="post" action="autospecial.php" autocomplete="off"
+            onsubmit="enviar();return false;">
             <h2>COMPLETÁ EL FORMULARIO
               Y CALCULÁ EL VALOR DE TU CUOTA</h2>
             <div id="userFormData">
@@ -182,11 +183,6 @@
                   <input type="radio" name="anticipo" value="no" id="showInfoNo">
                 </label>
               </div>
-
-
-
-
-
             </div>
 
 
@@ -195,7 +191,7 @@
 
                 <p><span id="anticipo"> 0 </span> </p>
                 <input id="range" type="range" value="0" min="50000" max="600000" step="100" name="anticipoAgregado">
-                <p class="left">$50.000</p>
+                <p class="left"></p>
                 <p class="right">$600.000</p>
               </label>
             </div>

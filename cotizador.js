@@ -1,5 +1,4 @@
 const anticipoSection = $(".anticipoSection");
-
 const enviar = $("#button");
 const resultado = $(".resultado");
 const userFormData = $("#userFormData");
@@ -10,14 +9,13 @@ const emailValidate = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 const error = $("#error");
 const anticipoUsado = $(".anticipoUsado");
 
-
 $("#anticipo").html(
   "Anticipo de " + String($("#range").val()).replace(/(.)(?=(\d{3})+$)/g, "$1.")
 );
 
+$("" + anticipoSection + " p.left").html("$50.000");
 error.hide();
 enviar.hide();
-
 
 $("#valorDelAuto").change(function() {
   let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
@@ -71,7 +69,9 @@ $("#calcular").on("click", function(e) {
   } else if (!emailValidate.test(email.val())) {
     error.show().html("El campo <strong>Email </strong> no es váildo");
   } else {
+
     // calcular
+
     if ($("#valorDelAuto option:selected").attr("name") == "seleccionar") {
       error.show().html("Debe seleccionar un modelo");
       resultado.hide();
@@ -147,3 +147,5 @@ $("#calcular").on("click", function(e) {
     // fin calcular
   }
 });
+
+
