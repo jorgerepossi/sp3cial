@@ -13,8 +13,8 @@ $("#anticipo").html(
   "Anticipo de " + String($("#range").val()).replace(/(.)(?=(\d{3})+$)/g, "$1.")
 );
 
-$("" + anticipoSection + " p.left").html("$50.000");
-$("" + anticipoSection + " p.right").html("$600.000");
+$(" .anticipoSection p.left").html("$50.000");
+$(" .anticipoSection p.right").html("$600.000");
 error.hide();
 enviar.hide();
 
