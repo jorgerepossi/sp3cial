@@ -153,8 +153,6 @@
 
             </div>
             <div class="form-group">
-
-
               <select name="modelo" id="valorDelAuto" class="inputCiudad form-control" required>
                 <option selected name="modelo"> Modelo de interés</option>
 
@@ -163,6 +161,7 @@
               </select>
 
             </div>
+
 
             <!-- Anticipo -->
 
