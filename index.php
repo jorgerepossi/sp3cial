@@ -199,6 +199,8 @@
               </label>
             </div>
 
+
+
             <!-- Usado -->
 
             <div class="form-group anticipoUsado col-md-12 col-xs-12">
