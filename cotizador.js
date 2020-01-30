@@ -47,6 +47,17 @@ $("#showInfoNo").on("click", function() {
  
 });
 
+
+$("#showUsado").on("click", function() {
+  anticipoSection.slideDown();
+});
+
+$("#showUsadoNo").on("click", function() {
+  anticipoSection.slideUp();
+  $("#rangoSeleccionado").attr("value", "0");
+ 
+});
+
 $("input").on("change", function() {
   let activo = $('[type="radio"]:checked').val();
   $("#anticipoSeleccionado").val(activo);
@@ -88,6 +99,8 @@ $("#calcular").on("click", function(e) {
       const cuotasPagas = Math.round(anticipo / valorDeLaCuota);
       const cantCuotasRestantes = 86 - cuotasPagas;
       
+
+       
 
       userFormData.hide();
 

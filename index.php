@@ -210,41 +210,86 @@
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="showInfo">
                   <p class="conanticipo btn">Si</p>
-                  <input type="radio" name="anticipo" value="si" id="showInfo">
+                  <input type="radio" name="anticipo" value="si" id="showUsado">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="showInfoNo">
                   <p class="sinanticipo btn">No</p>
-                  <input type="radio" name="anticipo" value="no" id="showInfoNo">
+                  <input type="radio" name="anticipo" value="no" id="showUsadoNo">
                 </label>
               </div>
             </div>
+            <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding">
+              <div class="form-group  col-md-12 col-xs-12 nopadding">
+                <div class="form-group">
+                  <select name="marca" id="Marca" class="form-control" required>
 
-            <div class="form-group anticipoUsado col-md-12 col-xs-12">
-
-              <div class="col-xs-12 col-md-12 nopadding">
-                <p class="text-center">Modelo</p>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfo">
-                  <p class="conanticipo btn">Año</p>
-                  <input type="text" name="anticipo" value="si" id="showInfo">
-                </label>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfoNo">
-                  <p class="sinanticipo btn">Modelo</p>
-                  <input type="text" name="anticipo" value="no" id="showInfoNo">
-                </label>
+                    <option value="marca"> Marca </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select name="modelo" id="Modelo" class="form-control" required>
+                    <option value="modelo"> Seleccionar Modelo </option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <select id="Anio" name="anio" class="form-control" required>
+                    <option value="anio"> Año </option>
+                    <option value="2019"> 2019 </option>
+                    <option value="2018"> 2018 </option>
+                    <option value="2017"> 2017 </option>
+                    <option value="2016"> 2016 </option>
+                    <option value="2015"> 2015 </option>
+                    <option value="2014"> 2014 </option>
+                    <option value="2013"> 2013 </option>
+                    <option value="2012"> 2012 </option>
+                    <option value="2011"> 2011 </option>
+                    <option value="2010"> 2010 </option>
+                    <option value="2009"> 2009 </option>
+                    <option value="2008"> 2008 </option>
+                    <option value="2007"> 2007 </option>
+                    <option value="2006"> 2006 </option>
+                  </select>
+                </div>
               </div>
             </div>
+
 
 
 
 
 
             <!-- Fin Usado -->
+
+
+            <!-- Plan caído  -->
+
+            <div class="form-group anticipoUsado col-md-12 col-xs-12">
+
+              <div class="col-xs-12 col-md-12 nopadding">
+                <p class="text-center">Tomamos tu plan caído </p>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
+                <label for="showInfo">
+                  <p class="conanticipo btn">Si</p>
+                  <input type="radio" name="anticipo" value="si" id="">
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
+                <label for="showInfoNo">
+                  <p class="sinanticipo btn">No</p>
+                  <input type="radio" name="anticipo" value="no" id="">
+                </label>
+              </div>
+            </div>
+
+
+
+
+
+
+            <!-- Plan caído  -->
 
 
             <input type="hidden" name="modeloSeleccionado" id="modeloSeleccionado" value="">
@@ -269,6 +314,7 @@
   </section>
 
   <script src="cotizador.js"></script>
+  <script src="marcas.js"></script>
 
 </body>
 
