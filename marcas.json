@@ -1,0 +1,384 @@
+{
+  "marcas": [
+    {
+      "id": 1,
+      "marca": "Audi",
+      "nombre": "Audi",
+      "modelos": [
+        "A1",
+        "A1_Sportback",
+        "A3",
+        "A3_Sportback",
+        "Q2",
+        "Q3",
+        "Q5"
+      ]
+    },
+    {
+      "id": 2,
+      "marca": "Chery",
+      "nombre": "Chery",
+      "modelos": [
+        "QQ",
+        "Tiggo",
+        "Tiggo_2",
+        "Tiggo_3",
+        "Tiggo_5"
+      ]
+    },
+    {
+      "id": 3,
+      "marca": "Chevrolet",
+      "nombre": "Chevrolet",
+      "modelos": [
+        "Agile",
+        "Astra_2",
+        "Aveo",
+        "Captiva",
+        "Celta",
+        "Corsa",
+        "Corsa_2",
+        "Corsa_Classic",
+        "Corsa_Wagon",
+        "Corsa_Classic_Wagon",
+        "Classic",
+        "Cobalt",
+        "Cruze",
+        "Meriva",
+        "Montana",
+        "Onix",
+        "Prisma",
+        "S-10",
+        "Sonic",
+        "Spark",
+        "Spin",
+        "Tracker",
+        "Trailblazer",
+        "Vectra",
+        "Zafira 2"
+      ]
+    },
+    {
+      "id": 4,
+      "marca": "Chrysler",
+      "nombre": "Chrysler",
+      "modelos": [
+        "Pt Cruiser"
+      ]
+    },
+    {
+      "id": 5,
+      "marca": "Citroën",
+      "nombre": "Citroën",
+      "modelos": [
+        "Berlingo_Furgón",
+        "Berlingo_Multispace",
+        "C3",
+        "C3_Aircross",
+        "C3_Picasso",
+        "C4",
+        "C4_Aircross",
+        "C4_Cactus",
+        "C4_Grand_Picasso",
+        "C4_Lounge",
+        "C4_Picasso",
+        "C-Elysee",
+        "Picasso",
+        "Picasso_Safari",
+        "Picasso_Spirit"
+      ]
+    },
+    {
+      "id": 5,
+      "marca": "Dodge",
+      "nombre": "Dodge",
+      "modelos": [
+        "Journey",
+        "Ram"
+      ]
+    },
+    {
+      "id": 6,
+      "marca": "Ds",
+      "nombre": "Ds Automobiles",
+      "modelos": [
+        "Ds3",
+        "Ds3_Crossback",
+        "Ds4",
+        "Ds4_Crossback"
+      ]
+    },
+    {
+      "id": 7,
+      "marca": "Fiat",
+      "nombre": "Fiat",
+      "modelos": [
+        "500",
+        "500_X",
+        "Argo",
+        "Cronos",
+        "Doblo",
+        "Firorino",
+        "Grand_Siena",
+        "Idea",
+        "Idea_Adventure",
+        "Linea",
+        "Mobi",
+        "Palio",
+        "Palio_Weekend",
+        "Palio_Weekend_Adventure",
+        "Punto",
+        "Qubo",
+        "Siena",
+        "Strada",
+        "Strada_Adventure",
+        "Tipo",
+        "Toro",
+        "Uno",
+        "Uno_Novo"
+      ]
+    },
+    {
+      "id": 8,
+      "marca": "Ford",
+      "nombre": "Ford",
+      "modelos": [
+        "Ecosport",
+        "F-100",
+        "Fiesta",
+        "Focus",
+        "Ka",
+        "Kuga",
+        "Mondeo",
+        "Ranger",
+        "S-Max"
+      ]
+    },
+    {
+      "id": 9,
+      "marca": "Honda",
+      "nombre": "Honda",
+      "modelos": [
+        "Accord",
+        "City",
+        "Civic",
+        "Cvr",
+        "Fit",
+        "Hrv",
+        "Wr-v"
+      ]
+    },
+    {
+      "id": 10,
+      "marca": "Hyundai",
+      "nombre": "Hyundai",
+      "modelos": [
+        "Atos",
+        "Creta",
+        "Grand_I_10",
+        "Grand_Santa_Fe",
+        "I_10",
+        "I_30",
+        "Ioniq",
+        "Kona",
+        "Santa_Fe",
+        "Tucson"
+      ]
+    },
+    {
+      "id": 11,
+      "marca": "Isuzu",
+      "nombre": "Isuzu",
+      "modelos": [
+        "Pick-up"
+      ]
+    },
+    {
+      "id": 12,
+      "marca": "Jeep",
+      "nombre": "Jeep",
+      "modelos": [
+        "Cherokee",
+        "Compass",
+        "Grand_Cherokee",
+        "Renegade",
+        "Wrangler"
+      ]
+    },
+    {
+      "id": 13,
+      "marca": "Kia",
+      "nombre": "Kia",
+      "modelos": [
+        "Carnival",
+        "Cerato",
+        "Picanto",
+        "Rio",
+        "Rondo",
+        "Sorento",
+        "Soul",
+        "Sportage"
+      ]
+    },
+    {
+      "id": 14,
+      "marca": "Mercedes_Benz",
+      "nombre": "Mercedes Benz",
+      "modelos": [
+        "Viano",
+        "Vito"
+      ]
+    },
+    {
+      "id": 15,
+      "marca": "Mitsubishi",
+      "nombre": "Mitsubishi",
+      "modelos": [
+        "L200",
+        "Outlander"
+      ]
+    },
+    {
+      "id": 16,
+      "marca": "Nissan",
+      "nombre": "Nissan",
+      "modelos": [
+        "Frontier",
+        "Kicks",
+        "March",
+        "Note",
+        "Sentra",
+        "Versa",
+        "Xtrail"
+      ]
+    },
+    {
+      "id": 17,
+      "marca": "Peugeot",
+      "nombre": "Peugeot",
+      "modelos": [
+        "206",
+        "206_Sw",
+        "207",
+        "207_Compact",
+        "207_Compact_Sw",
+        "208",
+        "2008",
+        "301",
+        "307",
+        "307 Sw",
+        "308",
+        "3008",
+        "408",
+        "5008",
+        "Partner",
+        "Partner_Urbana",
+        "Partner_Patagonica"
+      ]
+    },
+    {
+      "id": 18,
+      "marca": "Renault",
+      "nombre": "Renault",
+      "modelos": [
+        "Captur",
+        "Clio_2_F2",
+        "Clio_Mio",
+        "Duster",
+        "Fluence",
+        "Grand_Scenic",
+        "Kangoo_2",
+        "Kangoo_Ze",
+        "Kwid",
+        "Logan",
+        "Logan_2",
+        "Megane_2",
+        "Megane_3",
+        "Oroch",
+        "Sandero",
+        "Sandero_2",
+        "Sandero_Stepway",
+        "Sandero_Stepway_2",
+        "Scenic_2",
+        "Symbol"
+      ]
+    },
+    {
+      "id": 19,
+      "marca": "Subaru",
+      "nombre": "Subaru",
+      "modelos": [
+        "Forester",
+        "Impreza",
+        "Legacy",
+        "Legacy_R",
+        "Outback",
+        "Tribeca"
+      ]
+    },
+    {
+      "id": 20,
+      "marca": "Suzuki",
+      "nombre": "Suzuki",
+      "modelos": [
+       "Fun",
+       "Grand Vitara",
+       "Jimmy",       
+       "Vitara"
+      ]
+    },
+    {
+      "id": 21,
+      "marca": "Toyota",
+      "nombre": "Toyota",
+      "modelos": [
+       "C-HR",
+       "Corolla",
+       "Etios",       
+       "Hilux",
+       "Innova",
+       "Land_Cruiser",
+       "Land_Cruiser_Prado",
+       "Prius",
+       "Rav_4",
+       "Sw4",
+       "Yaris"
+      ]
+    },
+    {
+      "id": 22,
+      "marca": "Volkswagen",
+      "nombre": "Volkswagen",
+      "modelos": [
+       "Amarok",
+       "Bora",
+       "Caddy",
+       "Cross_Fox",
+       "Fox",
+       "Gol",
+       "Gol_Country",
+       "Gol_Trend",
+       "Golf_7",
+       "Golf_7_Variant",
+       "New_Beetle",
+       "Passat", 
+       "Passat_Cc", 
+       "Polo",
+       "Saveiro",
+       "Scirocco",
+       "Sharan",
+       "Suran",
+       "Suran_Cross",
+       "T-Cross",
+       "The_Beetle",
+       "Tiguan",
+       "Tigua_ Al_ Space",
+       "Up!",
+       "Vento",
+       "Vento_Variant",
+       "Virtus",
+       "Voyage"
+      ]
+    }
+  ]
+}
