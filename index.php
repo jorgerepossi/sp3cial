@@ -208,18 +208,20 @@
                 <p class="text-center">¿Entrega usado? </p>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfo">
-                  <p class="conanticipo btn">Si</p>
-                  <input type="radio" name="anticipo" value="si" id="showUsado">
+                <label for="entregaUsado">
+                  <p class="conUsado btn">Si</p>
+                  <input type="radio" name="entregaUsado" value="si" id="entregaUsado">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfoNo">
-                  <p class="sinanticipo btn">No</p>
-                  <input type="radio" name="anticipo" value="no" id="showUsadoNo">
+                <label for="entregaUsadoNo">
+                  <p class="sinUsado btn">No</p>
+                  <input type="radio" name="entregaUsado" value="no" id="entregaUsadoNo">
                 </label>
               </div>
             </div>
+
+
             <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding">
               <div class="form-group  col-md-12 col-xs-12 nopadding">
                 <div class="form-group">
@@ -265,20 +267,20 @@
 
             <!-- Plan caído  -->
 
-            <div class="form-group anticipoUsado col-md-12 col-xs-12">
+            <div class="form-group planCaido col-md-12 col-xs-12">
 
               <div class="col-xs-12 col-md-12 nopadding">
                 <p class="text-center">Tomamos tu plan caído </p>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfo">
-                  <p class="conanticipo btn">Si</p>
+                <label for="">
+                  <p class="planCaidoSi btn">Si</p>
                   <input type="radio" name="anticipo" value="si" id="">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="showInfoNo">
-                  <p class="sinanticipo btn">No</p>
+                <label for="">
+                  <p class="planCaidoNo btn">No</p>
                   <input type="radio" name="anticipo" value="no" id="">
                 </label>
               </div>
