@@ -21,8 +21,6 @@ error.hide();
 enviar.hide();
 modelosUsadosSeleccionados.hide();
 
-
-
 $("#valorDelAuto").change(function() {
   let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
 
@@ -51,16 +49,12 @@ $("#showInfoNo").on("click", function() {
 });
 
 $("#entregaUsado").on("click", function() {
-  console.log('si')
-   modelosUsadosSeleccionados.slideDown();
+  modelosUsadosSeleccionados.slideDown();
 });
 
 $("#entregaUsadoNo").on("click", function() {
-  console.log('no')
   modelosUsadosSeleccionados.slideUp();
 });
-
-
 
 $("#showUsado").on("click", function() {
   anticipoSection.slideDown();
