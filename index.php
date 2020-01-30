@@ -162,7 +162,6 @@
 
             </div>
 
-
             <!-- Anticipo -->
 
             <div class="form-group anticipoUsado col-md-12 col-xs-12">
@@ -221,6 +220,27 @@
                 </label>
               </div>
             </div>
+
+            <div class="form-group anticipoUsado col-md-12 col-xs-12">
+
+              <div class="col-xs-12 col-md-12 nopadding">
+                <p class="text-center">Modelo</p>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
+                <label for="showInfo">
+                  <p class="conanticipo btn">Año</p>
+                  <input type="text" name="anticipo" value="si" id="showInfo">
+                </label>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
+                <label for="showInfoNo">
+                  <p class="sinanticipo btn">Modelo</p>
+                  <input type="text" name="anticipo" value="no" id="showInfoNo">
+                </label>
+              </div>
+            </div>
+
+
 
 
 
