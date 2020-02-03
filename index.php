@@ -101,7 +101,7 @@
           <div class="col-md-1 col-sm-12 col-xs-12"></div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <form id="invitacion" name="invitacion" method="post" action="autospecial.php" autocomplete="off"
+          <form id="invitacion" name="invitacion" method="post" action="test.php" autocomplete="off"
             onsubmit="enviar();return false;">
             <h2>COMPLETÁ EL FORMULARIO
               Y CALCULÁ EL VALOR DE TU CUOTA</h2>
@@ -225,13 +225,13 @@
             <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding">
               <div class="form-group  col-md-12 col-xs-12 nopadding">
                 <div class="form-group">
-                  <select name="marca" id="Marca" class="form-control" required>
+                  <select name="marca" id="Marca" class="form-control" required data-brand="">
 
                     <option value="marca"> Marca </option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <select name="modelo" id="Modelo" class="form-control" required>
+                  <select name="modelousado" id="Modelo" class="form-control" required>
                     <option value="modelo"> Seleccionar Modelo </option>
                   </select>
                 </div>
@@ -257,11 +257,6 @@
               </div>
             </div>
 
-
-
-
-
-
             <!-- Fin Usado -->
 
 
@@ -270,26 +265,21 @@
             <div class="form-group planCaido col-md-12 col-xs-12">
 
               <div class="col-xs-12 col-md-12 nopadding">
-                <p class="text-center">Tomamos tu plan caído </p>
+                <p class="text-center">¿Tenés tu Plan Caído? </p>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="">
+                <label for="planCaidoSi">
                   <p class="planCaidoSi btn">Si</p>
-                  <input type="radio" name="anticipo" value="si" id="">
+                  <input type="radio" name="planCaido" value="si" id="planCaidoSi">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
-                <label for="">
+                <label for="planCaidoNo">
                   <p class="planCaidoNo btn">No</p>
-                  <input type="radio" name="anticipo" value="no" id="">
+                  <input type="radio" name="planCaido" value="no" id="planCaidoNo">
                 </label>
               </div>
             </div>
-
-
-
-
-
 
             <!-- Plan caído  -->
 
@@ -298,9 +288,12 @@
             <input type="hidden" name="anticipoSeleccionado" id="anticipoSeleccionado" value="">
             <input type="hidden" name="rangoSeleccionado" id="rangoSeleccionado" value="">
             <input type="hidden" name="cuotasAPagarDe" id="cuotasAPagarDe" value="">
+            <input type="hidden" name="clienteEntregaUsado" id="clienteEntregaUsado" value="">
+
+          
 
 
-            <button id="calcular" class="boton btn-blue__item" type="submit">Calcular Cuota </button>
+            <button id="calcular" class="boton btn-blue__item" type="submit">Enviar Formulario</button>
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 

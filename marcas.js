@@ -7,22 +7,14 @@ function marcas_modelos_json(id, modelos) {
     if (id == "Marca" && modelos == null) {
       for (var i = 0; i < data.marcas.length; i++) {
         html +=
-          "<option value=" +
-          data.marcas[i].marca +
-          ">" +
-          data.marcas[i].nombre +
-          " </option>";
+          "<option value=" + data.marcas[i].marca + ">" + data.marcas[i].nombre +  " </option>";
       }
     } else {
       for (var i = 0; i < data.marcas.length; i++) {
         if (data.marcas[i].marca == modelos) {
           for (var m = 0; m < data.marcas[i].modelos.length; m++) {
             html +=
-              "<option value=" +
-              data.marcas[i].modelos[m] +
-              ">" +
-              data.marcas[i].modelos[m] +
-              " </option>";
+              "<option value=" + data.marcas[i].modelos[m] +  ">" + data.marcas[i].modelos[m] +  " </option>";
           }
         }
       }
@@ -33,8 +25,9 @@ function marcas_modelos_json(id, modelos) {
 
 $("#Marca").on("change", function() {
   var modelos = $(this).val();
-  //   console.log(modelos);
+     console.log(modelos);
   if (modelos != null) {
-    marcas_modelos_json("Modelo", modelos);
+    marcas_modelos_json("Modelo", modelos);   
   }
+
 });

@@ -40,20 +40,33 @@ $("#range").on("input", function() {
   $("#rangoSeleccionado").attr("value", range);
 });
 
+/************************************** */
+
+/** Anticipo */
+
 $("#showInfo").on("click", function() {
   anticipoSection.slideDown();
 });
+
 $("#showInfoNo").on("click", function() {
   anticipoSection.slideUp();
   $("#rangoSeleccionado").attr("value", "0");
 });
 
+/** fin Anticipo */
+
+/************************************** */
+
+/**  Usados */
+
 $("#entregaUsado").on("click", function() {
   modelosUsadosSeleccionados.slideDown();
+  $("#clienteEntregaUsado").attr("value", "si");
 });
 
 $("#entregaUsadoNo").on("click", function() {
   modelosUsadosSeleccionados.slideUp();
+  $("#clienteEntregaUsado").attr("value", "no");
 });
 
 $("#showUsado").on("click", function() {
@@ -64,6 +77,12 @@ $("#showUsadoNo").on("click", function() {
   anticipoSection.slideUp();
   $("#rangoSeleccionado").attr("value", "0");
 });
+
+/** fin Usados */
+
+/************************************** */
+
+/** Seleccionar Marca */
 
 $("input").on("change", function() {
   let activo = $('[type="radio"]:checked').val();

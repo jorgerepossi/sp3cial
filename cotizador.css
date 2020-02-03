@@ -1,148 +1,166 @@
 #invitacion {
-      background-color: #ededed;
-      padding: 10px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
+  background-color: #ededed;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
 
-    #invitacion h2 {
-      font-size: 1em;
-    }
+#invitacion h2 {
+  font-size: 1em;
+}
 
-    .btn-blue__item {
-      background-color: #0067bf;
-      border: 1px solid #2a96cf;
-      height: 5rem;
-      color: #fff;
-      text-align: center;
-      width: 100%;
-      display: inline-block;
-      cursor: pointer;
-      border-radius: 10px;
-      transition: all 400ms ease-in-out;
-      text-transform: uppercase;
-      outline: none;
+.btn-blue__item {
+  background-color: #0067bf;
+  border: 1px solid #2a96cf;
+  height: 5rem;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 400ms ease-in-out;
+  text-transform: uppercase;
+  outline: none;
+}
 
-    }
+form input.form-control,
+form select.form-control,
+form textarea.form-control {
+  border-radius: 0;
+  border: 1px solid #c7c7c7;
+}
 
-    form input.form-control,
-    form select.form-control,
-    form textarea.form-control {
-      border-radius: 0;
-      border: 1px solid #c7c7c7;
-    }
+.form-group.anticipoUsado p, .planCaido p {
+  font-size: 12px;
+  margin: 0;
+  padding-right: 5px;
+  
+}
 
-    .form-group.anticipoUsado p {
-      font-size: 12px;
-      margin: 0;
-      padding-right: 5px;
-    }
+span#anticipo {
+  text-align: center !important;
+  width: 100%;
+  background-color: transparent;
+  float: left;
+  margin-bottom: 10px;
+}
 
-    span#anticipo {
-      text-align: center !important;
-      width: 100%;
-      background-color: transparent;
-      float: left;
-      margin-bottom: 10px;
-    }
+.anticipoSection {
+  display: none;
+}
 
-    .anticipoSection {
-      display: none;
-    }
+.anticipoSection label {
+  width: 100%;
+}
 
-    .anticipoSection label {
-      width: 100%;
-    }
+.form-group.anticipoUsado label {
+  width: 100%;
+}
 
-    .form-group.anticipoUsado label {
-      width: 100%;
-    }
+.anticipoUsado p span {
+  float: right;
+}
 
-    .anticipoUsado p span {
-      float: right;
-    }
+.anticipoUsado, .planCaido {
+  background-color: #fff;
+ border: 1px solid #c7c7c7;
+  line-height: 34px;
+  text-align: left;
+  padding: 0 15px;
+}
 
-    .anticipoUsado {
-      background-color:
-        #fff;
-      /* height: 34px; */
-      line-height: 34px;
-      text-align: left;
-      padding: 0 15px;
-    }
+.resultado p {
+  text-align: center !important;
+}
 
-    .resultado p {
-      text-align: center !important;
-    }
+p.left {
+  float: left;
+}
 
-    p.left {
-      float: left;
-    }
+p.right {
+  float: right;
+}
 
-    p.right {
-      float: right;
-    }
+p.left,
+p.right {
+  font-size: 12px;
+  margin-top: 10px;
+  opacity: 0.5;
+}
 
-    p.left,
-    p.right {
+.itemContenido div h2 {
+  background-color: #163a4e;
+  overflow: hidden;
+  padding: 10px;
+  color: #fff !important;
+  font-family: fordAntennaBold !important;
+}
 
-      font-size: 12px;
-      margin-top: 10px;
-      opacity: .5;
-    }
+.itemContenido div h2 {
+  background-color: #163a4e;
+  overflow: hidden;
+}
 
-    .itemContenido div h2 {
-      background-color: #163a4e;
-      overflow: hidden;
-      padding: 10px;
-      color: #fff !important;
-      font-family: fordAntennaBold !important;
-    }
+#cotizacionInfo span {
+  display: block;
+}
 
-    .itemContenido div h2 {
-      background-color: #163a4e;
-      overflow: hidden;
-    }
+#cotizacionInfo h2 {
+  font-style: italic;
+}
 
-    #cotizacionInfo span {
-      display: block;
-    }
+#cotizacionInfo h2 strong {
+  font-family: fordAntennaBold;
+}
 
-    #cotizacionInfo h2 {
-      font-style: italic;
-    }
+#cotizacionInfo ul {
+  margin-top: 40px;
+}
 
-    #cotizacionInfo h2 strong {
-      font-family: fordAntennaBold;
-    }
+#cotizacionInfo ul li {
+  display: contents;
+  text-transform: uppercase;
+}
 
-    #cotizacionInfo ul {
+#cotizacionInfo ul li p {
+  color: #163a4e;
+  font-size: 20px;
+  font-family: fordAntennaBold;
+  position: relative;
+}
 
-      margin-top: 40px;
-    }
+#cotizacionInfo ul li p::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-color: #163a4e;
+  float: left;
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  left: -20px;
+}
 
-    #cotizacionInfo ul li {
-      display: contents;
-      text-transform: uppercase;
-    }
+input#range {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 3px;
+  background-color: #248bc8;
+  outline: none;
+}
 
-    #cotizacionInfo ul li p {
-      color: #163a4e;
-      font-size: 20px;
-      font-family: fordAntennaBold;
-      position: relative;
-
-    }
-
-    #cotizacionInfo ul li p::before {
-      content: '';
-      width: 10px;
-      height: 10px;
-      display: block;
-      background-color: #163a4e;
-      float: left;
-      border-radius: 50%;
-      position: absolute;
-      top: 8px;
-      left: -20px;
-    }
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #248bc8;
+}
