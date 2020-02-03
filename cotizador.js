@@ -18,7 +18,7 @@ $(" .anticipoSection p.left").html("$50.000");
 $(" .anticipoSection p.right").html("$600.000");
 
 error.hide();
-enviar.hide();
+enviar.disabled();
 modelosUsadosSeleccionados.hide();
 
 $("#valorDelAuto").change(function() {
@@ -89,7 +89,7 @@ $("input").on("change", function() {
   $("#anticipoSeleccionado").val(activo);
 });
 
-$("#calcular").on("click", function(e) {
+$("#button").on("click", function(e) {
   e.preventDefault();
 
   if (nombre.val() == "") {

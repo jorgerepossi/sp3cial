@@ -293,11 +293,11 @@
           
 
 
-            <button id="calcular" class="boton btn-blue__item" type="submit">Enviar Formulario</button>
+            <!-- <button id="calcular" class="boton btn-blue__item" type="submit">Enviar Formulario</button> -->
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 
-            <button id="button" class="boton btn-blue__item" type="submit">recibí mas info </button>
+            <button id="button" class="boton btn-blue__item" type="submit">Enviar Formulario</button>
 
           </form>
 
