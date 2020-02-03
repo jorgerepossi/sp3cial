@@ -101,7 +101,7 @@
           <div class="col-md-1 col-sm-12 col-xs-12"></div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
-          <form id="invitacion" name="invitacion" method="post" action="test.php" autocomplete="off"
+          <form id="invitacion" name="invitacion" method="post" action="autospecial.php" autocomplete="off"
             onsubmit="enviar();return false;">
             <h2>COMPLETÁ EL FORMULARIO
               Y CALCULÁ EL VALOR DE TU CUOTA</h2>

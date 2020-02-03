@@ -134,17 +134,16 @@ $("#button").on("click", function(e) {
   } else if ($("#clientePlanCaido").val() == "") {
     error.show().html("Debe seleccionar <strong>si tiene o no un plan caido </strong>");
   } else {
-    var form = $(this);
+    var form = $("#invitacion");
     var url = form.attr("action");
 
     $.ajax({
       type: "post",
-      url: "autospecial.php",
+      url: url,
       data: form.serialize(),
       success: function(data) {
-        resultado.html(
-          "<p><strong> sus datos fueron enviados correctamente </strong></p>"
-        );
+        resultado.html( "<p><strong> sus datos fueron enviados correctamente </strong></p>" );
+        error.hide();
       },
       error: function() {
         error.show().html("<strong>No pudimos enviar tus datos! </strong>");
