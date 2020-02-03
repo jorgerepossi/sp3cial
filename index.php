@@ -154,7 +154,7 @@
             </div>
             <div class="form-group">
               <select name="modelo" id="valorDelAuto" class="inputCiudad form-control" required>
-                <option selected name="modelo"> Modelo de interés</option>
+                <option selected name="seleccionar"> Modelo de interés</option>
 
                 <option name="Ford Ka" data-valor="835939">Ford Ka</option>
                 <option name="Ford Ka+" data-valor="833578">Ford Ka+</option>
@@ -289,6 +289,7 @@
             <input type="hidden" name="rangoSeleccionado" id="rangoSeleccionado" value="">
             <input type="hidden" name="cuotasAPagarDe" id="cuotasAPagarDe" value="">
             <input type="hidden" name="clienteEntregaUsado" id="clienteEntregaUsado" value="">
+            <input type="hidden" name="clientePlanCaido" id="clientePlanCaido" value="">
 
           
 
@@ -297,7 +298,7 @@
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 
-            <button id="button" class="boton btn-blue__item" type="submit">Enviar Formulario</button>
+            <input id="button" class="boton btn-blue__item" type="submit" value="Enviar Formulario"/>
 
           </form>
 
