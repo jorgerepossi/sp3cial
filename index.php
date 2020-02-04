@@ -202,7 +202,7 @@
 
             <!-- Usado -->
 
-            <div class="form-group anticipoUsado col-md-12 col-xs-12">
+            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12">
 
               <div class="col-xs-12 col-md-12 nopadding">
                 <p class="text-center">¿Entrega usado? </p>
@@ -291,14 +291,14 @@
             <input type="hidden" name="clienteEntregaUsado" id="clienteEntregaUsado" value="">
             <input type="hidden" name="clientePlanCaido" id="clientePlanCaido" value="">
 
-          
 
 
-            <!-- <button id="calcular" class="boton btn-blue__item" type="submit">Enviar Formulario</button> -->
+
+
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 
-            <input id="button" class="boton btn-blue__item" type="submit" value="Enviar Formulario"/>
+            <input id="button" class="boton btn-blue__item" type="submit" value="Enviar Formulario" />
 
           </form>
 

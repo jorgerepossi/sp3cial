@@ -83,15 +83,15 @@ $("#showUsadoNo").on("click", function() {
 
 /** fin Usados */
 
+/************************************** */
+
 /**  Plan Caido*/
 
 $("#planCaidoSi").on("click", function() {
- 
   $("#clientePlanCaido").attr("value", "si");
 });
 
 $("#planCaidoNo").on("click", function() {
- 
   $("#clientePlanCaido").attr("value", "no");
 });
 
@@ -112,13 +112,23 @@ $("#button").on("click", function(e) {
   if (nombre.val() == "") {
     error.show().html("El campo <strong>Nombre</strong> es requerido");
   } else if (nombre.val().length < 4) {
-    error.show().html("El campo <strong>Nombre</strong> debe tener al menos de 4 caracteres");
+    error
+      .show()
+      .html(
+        "El campo <strong>Nombre</strong> debe tener al menos de 4 caracteres"
+      );
   } else if (telefono.val() == "") {
     error.show().html("Debes completar el campo <strong>Teléfono </strong> ");
   } else if (isNaN(telefono.val())) {
-    error.show().html("El campo <strong>Teléfono </strong>  sólo admite números");
+    error
+      .show()
+      .html("El campo <strong>Teléfono </strong>  sólo admite números");
   } else if (telefono.val().length < 7) {
-    error.show().html("El campo <strong>Teléfono </strong> debe tener al menos de 8 caracteres");
+    error
+      .show()
+      .html(
+        "El campo <strong>Teléfono </strong> debe tener al menos de 8 caracteres"
+      );
   } else if (email.val() == "") {
     error.show().html("Debes completar el campo <strong>Email </strong> ");
   } else if (!emailValidate.test(email.val())) {
@@ -130,9 +140,13 @@ $("#button").on("click", function(e) {
   } else if (anticipoSeleccionado.val() == "") {
     error.show().html("Debe seleccionar <strong>un tipo de anticipo </strong>");
   } else if (clienteEntregaUsado.val() == "") {
-    error.show().html("Debe seleccionar <strong>si tiene o no un modelo usado </strong>");
+    error
+      .show()
+      .html("Debe seleccionar <strong>si tiene o no un modelo usado </strong>");
   } else if ($("#clientePlanCaido").val() == "") {
-    error.show().html("Debe seleccionar <strong>si tiene o no un plan caido </strong>");
+    error
+      .show()
+      .html("Debe seleccionar <strong>si tiene o no un plan caido </strong>");
   } else {
     var form = $("#invitacion");
     var url = form.attr("action");
@@ -141,9 +155,24 @@ $("#button").on("click", function(e) {
       type: "post",
       url: url,
       data: form.serialize(),
+      beforeSend: function() {
+        $("#userFormData").hide();
+        $("#entregaUsadoContent").hide();
+        $("#modelosUsadosSeleccionados").hide();
+        $(".anticipoUsado").hide();
+        $(".anticipoSection").hide();
+        $(".planCaido").hide();
+
+        resultado.html(
+          "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i> <span class='sr-only'>Loading...</span>"
+        );
+      },
       success: function(data) {
-        resultado.html( "<p><strong> sus datos fueron enviados correctamente </strong></p>" );
+        resultado.html(
+          "<div class='alert alert-success'> <p><strong> sus datos fueron enviados correctamente </strong></p> </div> "
+        );
         error.hide();
+        form[0].reset();
       },
       error: function() {
         error.show().html("<strong>No pudimos enviar tus datos! </strong>");
