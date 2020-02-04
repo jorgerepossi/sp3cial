@@ -31,12 +31,7 @@ form textarea.form-control {
   border: 1px solid #c7c7c7;
 }
 
-.form-group.anticipoUsado p, .planCaido p {
-  font-size: 12px;
-  margin: 0;
-  padding-right: 5px;
-  
-}
+
 
 span#anticipo {
   text-align: center !important;
@@ -62,13 +57,7 @@ span#anticipo {
   float: right;
 }
 
-.anticipoUsado, .planCaido {
-  background-color: #fff;
- border: 1px solid #c7c7c7;
-  line-height: 34px;
-  text-align: left;
-  padding: 0 15px;
-}
+
 
 .resultado p {
   text-align: center !important;
@@ -163,4 +152,24 @@ input[type="range"]::-webkit-slider-thumb {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border: 1px solid #248bc8;
+}
+
+.bloque {
+  line-height: 34px;
+  text-align: left;
+  padding: 10px 15px;
+}
+.bloque__blanco {
+  border: 1px solid #c7c7c7;
+  background-color: #fff;
+}
+
+.bloque__text-center{
+  text-align: center;
+}
+
+.bloque__size-small{
+  font-size: 1rem;
+   margin: 0;
+  padding-right: 5px;
 }

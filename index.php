@@ -159,28 +159,25 @@
               </select>
             </div>
             <!-- Anticipo -->
-            <div class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide">
+            <div class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
 
-              <div class="col-xs-12 col-md-12 nopadding">
-                <p class="text-center">¿Entrega anticipo? </p>
-              </div>
+             
+                <p class="bloque__text-center">¿Entrega anticipo? </p>
+              
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="showInfo">
-                  <p class="conanticipo btn">Con anticipo</p>
+                  <p class="bloque__size-small conanticipo btn">Con anticipo</p>
                   <input type="radio" name="anticipo" value="si" id="showInfo">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="showInfoNo">
-                  <p class="sinanticipo btn">Sin anticipo</p>
+                  <p class="bloque__size-small sinanticipo btn">Sin anticipo</p>
                   <input type="radio" name="anticipo" value="no" id="showInfoNo">
                 </label>
               </div>
             </div>
-
-            <!-- Fin Anticipo -->
-
-            <div class="anticipoSection col-md-12 col-xs-12 beforeHide">
+            <div class="anticipoSection col-md-12 col-xs-12 beforeHide ">
               <label for="">
                 <p><span id="anticipo"> 0 </span> </p>
                 <input id="range" type="range" value="0" min="50000" max="600000" step="100" name="anticipoAgregado">
@@ -188,28 +185,28 @@
                 <p class="right"></p>
               </label>
             </div>
+            <!-- Fin Anticipo -->
+
+
             <!-- Usado -->
+            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
 
-            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide">
-
-              <div class="col-xs-12 col-md-12 nopadding">
-                <p class="text-center">¿Entrega usado? </p>
-              </div>
+              
+                <p class="bloque__text-center">¿Entrega usado? </p>
+             
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="entregaUsado">
-                  <p class="conUsado btn">Si</p>
+                  <p class="bloque__size-small conUsado btn">Si</p>
                   <input type="radio" name="entregaUsado" value="si" id="entregaUsado">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="entregaUsadoNo">
-                  <p class="sinUsado btn">No</p>
+                  <p class="bloque__size-small sinUsado btn">No</p>
                   <input type="radio" name="entregaUsado" value="no" id="entregaUsadoNo">
                 </label>
               </div>
             </div>
-
-
             <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding beforeHide">
               <div class="form-group  col-md-12 col-xs-12 nopadding">
                 <div class="form-group">
@@ -244,25 +241,24 @@
                 </div>
               </div>
             </div>
-
             <!-- Fin Usado -->
 
 
             <!-- Plan caído  -->
 
-            <div class="form-group planCaido col-md-12 col-xs-12 beforeHide">
-              <div class="col-xs-12 col-md-12 nopadding">
-                <p class="text-center">¿Tenés tu Plan Caído? </p>
-              </div>
+            <div class="form-group planCaido col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
+              
+                <p class="bloque__text-center">¿Tenés tu Plan Caído? </p>
+              
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="planCaidoSi">
-                  <p class="planCaidoSi btn">Si</p>
+                  <p class="bloque__size-small planCaidoSi btn">Si</p>
                   <input type="radio" name="planCaido" value="si" id="planCaidoSi">
                 </label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="planCaidoNo">
-                  <p class="planCaidoNo btn">No</p>
+                  <p class="bloque__size-small planCaidoNo btn">No</p>
                   <input type="radio" name="planCaido" value="no" id="planCaidoNo">
                 </label>
               </div>
@@ -278,7 +274,7 @@
             <input id="clienteEntregaUsado"   type="hidden" name="clienteEntregaUsado"  value="">
             <input id="clientePlanCaido"      type="hidden" name="clientePlanCaido"  value="">
             <div class="resultado"></div>
-            <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
+            <div id="error" class="bloque__text-center alert alert-danger mtop col-md-12"></div>
 
             <input id="button" class="boton btn-blue__item" type="submit" value="Enviar Formulario" />
 

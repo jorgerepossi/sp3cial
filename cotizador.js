@@ -158,15 +158,15 @@ $("#button").on("click", function(e) {
       beforeSend: function() {
         error.hide();
         $(".beforeHide").hide();
-         resultado.html(
+        resultado.html(
           "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i> <span class='sr-only'>Loading...</span>"
         );
       },
       success: function(data) {
         resultado.html(
-          "<div class='alert alert-success'> <p><strong> sus datos fueron enviados correctamente </strong></p> </div> "
+          "<div class='alert alert-success'> <p><strong> ¡Muchas gracias! Sus datos fueron enviados correctamente.  </strong></p><p> <strong> A la brevedad será contactado por un asesor. </strong>  </p> </div> "
         );
-        
+
         form[0].reset();
       },
       error: function() {
