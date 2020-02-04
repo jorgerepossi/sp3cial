@@ -17,7 +17,7 @@
   <!-- Latest compiled and minified CSS-->
   <link rel="stylesheet" href="css/owl.theme.default.css">
   <link rel="stylesheet" href="/css/bootstrap.css">
-  <link rel="stylesheet" href="cotizador.css">
+  <link rel="stylesheet" href="css/cotizador.css">
   <link rel="shortcut icon" type="image/x-icon"
     href="https://www.ford.com.ar/etc/designs/guxfoap/clientlibs/guxfoap/img/favicon.ico">
   <!-- Facebook Pixel Code -->
@@ -60,7 +60,7 @@
         <div class="hardTitle">
           <h2>Cotizador</h2>
         </div>
-        <img src="cotizador.jpg" alt="" class="img-responsive">
+        <img src="img/cotizador.jpg" alt="" class="img-responsive">
         <div id="infoFichaUsados" class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
           <div class="col-md-1 col-sm-12 col-xs-12"></div>
           <div id="cotizacionInfo" class="col-md-10 col-lg-10 col-xs-12 nopadding">
@@ -84,9 +84,9 @@
 
               <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 nopadding">
                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                  <img src="ka.jpg" alt="" class="img-responsive"></div>
+                  <img src="img/ka.jpg" alt="" class="img-responsive"></div>
                 <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
-                  <img src="kaplus.jpg" alt="" class="img-responsive"></div>
+                  <img src="img/kaplus.jpg" alt="" class="img-responsive"></div>
               </div>
 
               <div class="col-md-12 nopadding">
@@ -105,8 +105,7 @@
             onsubmit="enviar();return false;">
             <h2>COMPLETÁ EL FORMULARIO
               Y CALCULÁ EL VALOR DE TU CUOTA</h2>
-            <div id="userFormData">
-
+            <div id="userFormData" class="beforeHide">
               <div class="form-group">
                 <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre y Apellido"
                   required>
@@ -152,19 +151,15 @@
               </div>
 
             </div>
-            <div class="form-group">
+            <div class="form-group beforeHide">
               <select name="modelo" id="valorDelAuto" class="inputCiudad form-control" required>
                 <option selected name="seleccionar"> Modelo de interés</option>
-
                 <option name="Ford Ka" data-valor="835939">Ford Ka</option>
                 <option name="Ford Ka+" data-valor="833578">Ford Ka+</option>
               </select>
-
             </div>
-
             <!-- Anticipo -->
-
-            <div class="form-group anticipoUsado col-md-12 col-xs-12">
+            <div class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide">
 
               <div class="col-xs-12 col-md-12 nopadding">
                 <p class="text-center">¿Entrega anticipo? </p>
@@ -185,24 +180,17 @@
 
             <!-- Fin Anticipo -->
 
-
-
-
-            <div class="anticipoSection col-md-12 col-xs-12">
+            <div class="anticipoSection col-md-12 col-xs-12 beforeHide">
               <label for="">
-
                 <p><span id="anticipo"> 0 </span> </p>
                 <input id="range" type="range" value="0" min="50000" max="600000" step="100" name="anticipoAgregado">
                 <p class="left"></p>
                 <p class="right"></p>
               </label>
             </div>
-
-
-
             <!-- Usado -->
 
-            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12">
+            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide">
 
               <div class="col-xs-12 col-md-12 nopadding">
                 <p class="text-center">¿Entrega usado? </p>
@@ -222,7 +210,7 @@
             </div>
 
 
-            <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding">
+            <div id="modelosUsadosSeleccionados" class="col-md-12 col-xs-12 nopadding beforeHide">
               <div class="form-group  col-md-12 col-xs-12 nopadding">
                 <div class="form-group">
                   <select name="marca" id="Marca" class="form-control" required data-brand="">
@@ -262,8 +250,7 @@
 
             <!-- Plan caído  -->
 
-            <div class="form-group planCaido col-md-12 col-xs-12">
-
+            <div class="form-group planCaido col-md-12 col-xs-12 beforeHide">
               <div class="col-xs-12 col-md-12 nopadding">
                 <p class="text-center">¿Tenés tu Plan Caído? </p>
               </div>
@@ -284,17 +271,12 @@
             <!-- Plan caído  -->
 
 
-            <input type="hidden" name="modeloSeleccionado" id="modeloSeleccionado" value="">
-            <input type="hidden" name="anticipoSeleccionado" id="anticipoSeleccionado" value="">
-            <input type="hidden" name="rangoSeleccionado" id="rangoSeleccionado" value="">
-            <input type="hidden" name="cuotasAPagarDe" id="cuotasAPagarDe" value="">
-            <input type="hidden" name="clienteEntregaUsado" id="clienteEntregaUsado" value="">
-            <input type="hidden" name="clientePlanCaido" id="clientePlanCaido" value="">
-
-
-
-
-
+            <input id="modeloSeleccionado"    type="hidden" name="modeloSeleccionado"  value="">
+            <input id="anticipoSeleccionado"  type="hidden" name="anticipoSeleccionado"  value="">
+            <input id="rangoSeleccionado"     type="hidden" name="rangoSeleccionado"  value="">
+            <input id="cuotasAPagarDe"        type="hidden" name="cuotasAPagarDe" value="">
+            <input id="clienteEntregaUsado"   type="hidden" name="clienteEntregaUsado"  value="">
+            <input id="clientePlanCaido"      type="hidden" name="clientePlanCaido"  value="">
             <div class="resultado"></div>
             <div id="error" class="text-center alert alert-danger mtop col-md-12"></div>
 

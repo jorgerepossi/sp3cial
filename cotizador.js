@@ -156,14 +156,9 @@ $("#button").on("click", function(e) {
       url: url,
       data: form.serialize(),
       beforeSend: function() {
-        $("#userFormData").hide();
-        $("#entregaUsadoContent").hide();
-        $("#modelosUsadosSeleccionados").hide();
-        $(".anticipoUsado").hide();
-        $(".anticipoSection").hide();
-        $(".planCaido").hide();
-
-        resultado.html(
+        error.hide();
+        $(".beforeHide").hide();
+         resultado.html(
           "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i> <span class='sr-only'>Loading...</span>"
         );
       },
@@ -171,7 +166,7 @@ $("#button").on("click", function(e) {
         resultado.html(
           "<div class='alert alert-success'> <p><strong> sus datos fueron enviados correctamente </strong></p> </div> "
         );
-        error.hide();
+        
         form[0].reset();
       },
       error: function() {
