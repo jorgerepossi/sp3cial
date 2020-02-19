@@ -5,7 +5,7 @@ A web car form to sen info to the owner
 
 ###Cotizador.js 
 
-...
+```
 <script>
 const anticipoSection = $(".anticipoSection");
 const enviar = $("#button");
@@ -188,4 +188,4 @@ $.ajax({
 });
 
 </script>
-...
+```
