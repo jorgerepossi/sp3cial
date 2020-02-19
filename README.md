@@ -6,7 +6,7 @@ A web car form to sen info to the owner
 ###Cotizador.js 
 
 ```
-<script>
+
 const anticipoSection = $(".anticipoSection");
 const enviar = $("#button");
 const resultado = $(".resultado");
@@ -187,5 +187,8 @@ $.ajax({
 }
 });
 
-</script>
 ```
+
+
+
+copyright © 2020 Jo Repossi [link](@jorgerepossi) @jorgerepossi
