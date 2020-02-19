@@ -58,7 +58,7 @@
     <div class="container">
       <div class="innerMainUsados">
         <div class="hardTitle">
-          <h2>Cotizador</h2>
+          <h2>Auto Special Crédito</h2>
         </div>
         <img src="img/cotizador.jpg" alt="" class="img-responsive">
         <div id="infoFichaUsados" class="col-xs-12 col-sm-12 col-md-8 col-lg-9">
@@ -161,9 +161,9 @@
             <!-- Anticipo -->
             <div class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
 
-             
-                <p class="bloque__text-center">¿Entrega anticipo? </p>
-              
+
+              <p class="bloque__text-center">¿Entrega anticipo? </p>
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="showInfo">
                   <p class="bloque__size-small conanticipo btn">Con anticipo</p>
@@ -189,11 +189,12 @@
 
 
             <!-- Usado -->
-            <div id="entregaUsadoContent" class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
+            <div id="entregaUsadoContent"
+              class="form-group anticipoUsado col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
 
-              
-                <p class="bloque__text-center">¿Entrega usado? </p>
-             
+
+              <p class="bloque__text-center">¿Entrega usado? </p>
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="entregaUsado">
                   <p class="bloque__size-small conUsado btn">Si</p>
@@ -247,9 +248,9 @@
             <!-- Plan caído  -->
 
             <div class="form-group planCaido col-md-12 col-xs-12 beforeHide bloque bloque__blanco">
-              
-                <p class="bloque__text-center">¿Tenés tu Plan Caído? </p>
-              
+
+              <p class="bloque__text-center">¿Tenés tu Plan Caído? </p>
+
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 nopadding">
                 <label for="planCaidoSi">
                   <p class="bloque__size-small planCaidoSi btn">Si</p>
@@ -267,12 +268,12 @@
             <!-- Plan caído  -->
 
 
-            <input id="modeloSeleccionado"    type="hidden" name="modeloSeleccionado"  value="">
-            <input id="anticipoSeleccionado"  type="hidden" name="anticipoSeleccionado"  value="">
-            <input id="rangoSeleccionado"     type="hidden" name="rangoSeleccionado"  value="">
-            <input id="cuotasAPagarDe"        type="hidden" name="cuotasAPagarDe" value="">
-            <input id="clienteEntregaUsado"   type="hidden" name="clienteEntregaUsado"  value="">
-            <input id="clientePlanCaido"      type="hidden" name="clientePlanCaido"  value="">
+            <input id="modeloSeleccionado" type="hidden" name="modeloSeleccionado" value="">
+            <input id="anticipoSeleccionado" type="hidden" name="anticipoSeleccionado" value="">
+            <input id="rangoSeleccionado" type="hidden" name="rangoSeleccionado" value="">
+            <input id="cuotasAPagarDe" type="hidden" name="cuotasAPagarDe" value="">
+            <input id="clienteEntregaUsado" type="hidden" name="clienteEntregaUsado" value="">
+            <input id="clientePlanCaido" type="hidden" name="clientePlanCaido" value="">
             <div class="resultado"></div>
             <div id="error" class="bloque__text-center alert alert-danger mtop col-md-12"></div>
 

@@ -9,9 +9,6 @@ const emailValidate = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
 const error = $("#error");
 const anticipoUsado = $(".anticipoUsado");
 const modelosUsadosSeleccionados = $("#modelosUsadosSeleccionados");
-const consultas_provincia_cons = $("#Consultas_provincia_cons");
-const anticipoSeleccionado = $("#anticipoSeleccionado");
-const clienteEntregaUsado = $("#clienteEntregaUsado");
 
 $("#anticipo").html(
   "Anticipo de " + String($("#range").val()).replace(/(.)(?=(\d{3})+$)/g, "$1.")
@@ -21,7 +18,7 @@ $(" .anticipoSection p.left").html("$50.000");
 $(" .anticipoSection p.right").html("$600.000");
 
 error.hide();
-
+enviar.disabled();
 modelosUsadosSeleccionados.hide();
 
 $("#valorDelAuto").change(function() {
@@ -46,7 +43,6 @@ $("#range").on("input", function() {
 /************************************** */
 
 /** Anticipo */
-
 
 $("#showInfo").on("click", function() {
   anticipoSection.slideDown();
@@ -86,20 +82,6 @@ $("#showUsadoNo").on("click", function() {
 
 /************************************** */
 
-/**  Plan Caido*/
-
-$("#planCaidoSi").on("click", function() {
-  $("#clientePlanCaido").attr("value", "si");
-});
-
-$("#planCaidoNo").on("click", function() {
-  $("#clientePlanCaido").attr("value", "no");
-});
-
-/** fin Plan Caido */
-
-/************************************** */
-
 /** Seleccionar Marca */
 
 $("input").on("change", function() {
@@ -134,45 +116,107 @@ $("#button").on("click", function(e) {
     error.show().html("Debes completar el campo <strong>Email </strong> ");
   } else if (!emailValidate.test(email.val())) {
     error.show().html("El campo <strong>Email </strong> no es váildo");
-  } else if (consultas_provincia_cons.val().length < 1) {
-    error.show().html("El seleccionar <strong>una provincia </strong> ");
-  } else if ($("#valorDelAuto option:selected").val() == "Modelo de interés") {
-    error.show().html("Debe seleccionar <strong>un modelo </strong>");
-  } else if (anticipoSeleccionado.val() == "") {
-    error.show().html("Debe seleccionar <strong>un tipo de anticipo </strong>");
-  } else if (clienteEntregaUsado.val() == "") {
-    error
-      .show()
-      .html("Debe seleccionar <strong>si tiene o no un modelo usado </strong>");
-  } else if ($("#clientePlanCaido").val() == "") {
-    error
-      .show()
-      .html("Debe seleccionar <strong>si tiene o no un plan caido </strong>");
   } else {
-    var form = $("#invitacion");
-    var url = form.attr("action");
+    // calcular
 
-    $.ajax({
-      type: "post",
-      url: url,
-      data: form.serialize(),
-      beforeSend: function() {
-        error.hide();
-        $(".beforeHide").hide();
-        resultado.html(
-          "<i class='fa fa-spinner fa-pulse fa-3x fa-fw'></i> <span class='sr-only'>Loading...</span>"
-        );
-      },
-      success: function(data) {
-        resultado.html(
-          "<div class='alert alert-success'> <p><strong> ¡Muchas gracias! Sus datos fueron enviados correctamente.  </strong></p><p> <strong> A la brevedad será contactado por un asesor. </strong>  </p> </div> "
-        );
+    if ($("#valorDelAuto option:selected").attr("name") == "seleccionar") {
+      error.show().html("Debe seleccionar un modelo");
+      resultado.hide();
+    } else {
+      error.hide();
+      resultado.show();
 
-        form[0].reset();
-      },
-      error: function() {
-        error.show().html("<strong>No pudimos enviar tus datos! </strong>");
+      let valorDelAuto = $("#valorDelAuto option:selected").attr("data-valor");
+      let modeloDelAuto = $("#valorDelAuto option:selected").attr("name");
+      let anticipo = $("#range").attr("value");
+
+      const valorDeLaCuota = Math.round(valorDelAuto / 84);
+      const cuotasPagas = Math.round(anticipo / valorDeLaCuota);
+      const cantCuotasRestantes = 86 - cuotasPagas;
+
+      userFormData.hide();
+
+      if ($("#anticipoSeleccionado").val() == "si") {
+        console.log("activo");
+        resultado.html(
+          `
+             <div class='has-success'>
+             <p class='control-label'> Modelo seleccionado ` +
+            modeloDelAuto +
+            `</p>
+             <p class='control-label'> Anticipo de $` +
+            String(anticipo).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            `</p>
+             <p class='control-label'> ` +
+            cantCuotasRestantes +
+            ` Cuotas de $` +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            `</p> 
+             </div>
+             `
+        );
+        enviar.show();
+        $("#calcular").hide();
+        $("#valorDelAuto").hide();
+        anticipoUsado.hide();
+        anticipoSection.hide();
+        $("#cuotasAPagarDe").attr(
+          "value",
+          " " +
+            cantCuotasRestantes +
+            " Cuotas de $" +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            ""
+        );
+      } else if ($("#anticipoSeleccionado").val() == "no") {
+        resultado.html(
+          `
+            <div class='has-success'>
+            <p class='control-label'> Modelo seleccionado ` +
+            modeloDelAuto +
+            `</p>
+            <p class='control-label'> 84 Cuotas de $` +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            `</p> 
+            </div>
+          `
+        );
+        $("#cuotasAPagarDe").attr(
+          "value",
+          " 84 Cuotas de $" +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            ""
+        );
+        anticipoUsado.hide();
+        enviar.show();
+        $("#valorDelAuto").hide();
+        $("#range").val();
+        $("#calcular").hide();
+      } else {
+        resultado.html(
+          `
+            <div class='has-success'>
+            <p class='control-label'> Modelo seleccionado ` +
+            modeloDelAuto +
+            `</p>
+            <p class='control-label'> 84 Cuotas de $` +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            `</p> 
+           </div>
+          `
+        );
+        $("#cuotasAPagarDe").attr(
+          "value",
+          " 84 Cuotas de $" +
+            String(valorDeLaCuota).replace(/(.)(?=(\d{3})+$)/g, "$1.") +
+            ""
+        );
+        anticipoUsado.hide();
+        enviar.show();
+        $("#valorDelAuto").hide();
+        $("#calcular").hide();
       }
-    });
+    }
+    // fin calcular
   }
 });
