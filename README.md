@@ -769,6 +769,11 @@ $.ajax({
         </div>
 ```
 
-Made by [@jorgerepossi](https://github.com/jorgerepossi/sp3cial) 
+
+
+
+**Made by** [@jorgerepossi](https://github.com/jorgerepossi/sp3cial)
+
+**Online Version** [AutoSpecial - Cotizador ](https://www.autospecial.com.ar/cotizador/)
 
 copyright © 2020 Jo Repossi [@jorgerepossi](https://github.com/jorgerepossi/sp3cial) 
