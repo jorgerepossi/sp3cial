@@ -191,4 +191,4 @@ $.ajax({
 
 
 
-copyright © 2020 Jo Repossi [link](@jorgerepossi) @jorgerepossi
+copyright © 2020 Jo Repossi [@jorgerepossi](https://github.com/jorgerepossi/sp3cial) 
