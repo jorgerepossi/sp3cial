@@ -1,6 +1,6 @@
 # Web car form validation
 
-A web car form to sen info to the owner
+A web car form to send info to the owner
 ---
 
 <sub> <sup>  <sup>  Cotizador.js  </sup> </sup>   </sub>
